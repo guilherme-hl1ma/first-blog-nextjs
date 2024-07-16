@@ -6,8 +6,11 @@ import { MainContainer } from '@/components/MainContainer';
 import { PostContainer } from '@/components/PostContainer';
 import { PostCover } from '@/components/PostCover';
 import { PostDetails } from '@/components/PostDetails';
+import { SITE_NAME } from '@/config/app-config';
 import { PostData } from '@/domain/posts/post';
 import { convertParagraphsToMarkdown } from '@/utils/convert-paragraphs-to-markdown';
+import { removeMarkdown } from '@/utils/remove-markdown';
+import Head from 'next/head';
 
 export type PostProps = {
   post: PostData;
@@ -18,6 +21,15 @@ export const Post = ({ post }: PostProps) => {
 
   return (
     <>
+      <Head>
+        <title>
+          {post.title} - {SITE_NAME}
+        </title>
+        <meta
+          name="description"
+          content={removeMarkdown(markdownContent).slice(0, 150)}
+        />
+      </Head>
       <Header />
       <MainContainer>
         <Heading>{post.title}</Heading>
