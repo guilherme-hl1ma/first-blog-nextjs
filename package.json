@@ -7,12 +7,15 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy:static": "next build"
+    "deploy:static": "next build",
+    "postbuild":  "next-on-netlify"
   },
   "dependencies": {
+    "@netlify/plugin-nextjs": "^5.5.1",
     "babel-runtime": "^6.26.0",
     "disqus-react": "^1.1.5",
     "next": "14.2.4",
+    "next-on-netlify": "^3.0.1",
     "react": "^18",
     "react-dom": "^18",
     "react-markdown": "^9.0.1",
