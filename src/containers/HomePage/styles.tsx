@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { theme } from '@/styles/theme';
 import styled from 'styled-components';
 
