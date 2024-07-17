@@ -7,8 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy:static": "next build",
-    "postbuild":  "next-on-netlify"
+    "deploy:static": "next build"
   },
   "dependencies": {
     "@netlify/plugin-nextjs": "^3.0.1",
